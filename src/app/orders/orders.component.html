@@ -1,0 +1,219 @@
+
+<!-- Extra large modal -->
+<!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-xl">Extra large modal</button> -->
+<button class="btn btn-success course-btn-order" data-toggle="modal" data-target=".bd-example-modal-xl">ซื้อคอร์สเรียน</button>
+
+<div class="modal fade bd-example-modal-xl" tabindex="-1" role="dialog" aria-labelledby="myExtraLargeModalLabel" >
+  <div class="modal-dialog modal-xl">
+    <div class="modal-content">
+
+
+      <div class="modal-header">
+        <h3 class="modal-title" id="exampleModalLabel"> <i class="pi pi-shopping-cart"></i> สั่งซื้อและชำระเงิน</h3>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+          <div class="col-12">
+            <p-steps [model]="items"  [(activeIndex)]="activeStepIndex"  styleClass="steps-custom"></p-steps>
+          </div>
+          <section id="sec1">
+              <div class="row content-order">
+                  <div class="col-12">
+                    <div class="row pager">
+                      <div class="col-lg-6 col-sm-6 col-xs-12 left-panel" >
+                        <div class="card  text-white course-img-header">
+                            <img src="../../../assets/images/001.png" class="card-img" alt="...">
+                            <div class="card-img-overlay">
+                              <!-- <h5 class="card-title">Card title</h5>
+                              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                              <p class="card-text">Last updated 3 mins ago</p> -->
+                            </div>
+                          </div>
+
+                          <div class="row text-left">
+                              <div class="well-get-banklist">
+                                  <p> <i class="pi pi-money-bill"></i> วิธีการชำระเงิน</p>
+
+                                  <hr>
+                                  <span>ท่านสามารถชำระเงินได้โดยการ โอนเงินเข้าบัญชีดังต่อไปนี้ </span>
+                                  <ul>
+                                      <li>
+                                        <div>
+                                          <img src="../../assets/images/sbc-logo.png" alt="sbc-logo...." class="bank-logo-img"> <span> ธนาคารไทยพาณิชย์ </span>
+                                        </div>
+                                      </li>
+                                      <li>
+                                        <div>
+                                          <img src="../../assets/images/bbl-logo.png" alt="sbc-logo...." class="bank-logo-img"> <span> ธนาคารกรุงเทพ </span>
+                                        </div>
+                                      </li>
+                                      <li>
+                                        <div>
+                                          <img src="../../assets/images/ktb-logo.png" alt="sbc-logo...." class="bank-logo-img"> <span> ธนาคารกรุงไทย </span>
+                                        </div>
+                                      </li>
+
+
+                                  </ul>
+                              </div>
+                            </div>
+                      </div>
+                      <div class="col-lg-6 col-sm-6 col-xs-12"  >
+                          <div class=" order-group text-left ">
+                              <h3 class=" course-text-header">เคล็ดลับข้อละล้าน ฉบับ Top Trader</h3>
+                              <h4 class="course-text-header  price-text"> &#3647;9,999 บาท <small class="sale-text">15,000 บาท</small></h4>
+                          </div>
+                          <div class="row">
+                            <div class="col-12 text-left">
+                                <button class="btn btn-success course-btn-order-payment" (click)="confirmOrder()" > ซื้อเลย</button><br>
+                              <!-- <img src="../../assets/images/visa-logo.png" alt="visa logo..." class="visa-logo">
+                              <img src="../../assets/images/mastercard_logo.png" alt="mastercard logo..." class="mastercard-logo"> -->
+                            </div>
+                          </div>
+
+                          <div class="row text-left">
+                              <div class="well-get">
+                                  <p>สิ่งที่คุณจะได้รับ</p>
+                                  <hr>
+                                  <ul>
+                                      <li>สามารถเรียนจากที่ไหนก็ได้ เมื่อไรก็ได้ ตลอดชีวิต</li>
+                                      <li>เนื้อหาทั้งหมด 120 วิดีโอ ความยาวรวมกัน 8 ชั่วโมง 27 นาที</li>
+                                      <li>ไม่สอนทฤษฎีที่เพื่อน ๆ สามารถหาได้ฟรีจาก Internet</li>
+                                  </ul>
+                              </div>
+                            </div>
+
+
+                      </div>
+                    </div>
+                  </div>
+                </div>
+          </section>
+
+          <section id="sec2">
+              <div class="row content-order">
+                  <div class="col-12">
+                    <div class="row pager">
+
+                      <div class="col-lg-8 col-sm-12 col-xs-12"  >
+                          <div class=" order-group text-left ">
+                              <h3 class=" course-text-header">เคล็ดลับข้อละล้าน ฉบับ Top Trader</h3>
+                              <hr>
+                          </div>
+
+                          <!-- <form class="text-left"> -->
+                              <div class="form-group row">
+                                <label for="inputEmail3" class="col-sm-5 col-form-label">จำนวนเงินที่ต้องชำระ</label>
+                                <div class="col-sm-7">
+                                  <input type="text" class="form-control" id="inputEmail3" placeholder="จำนวนเงินที่ต้องชำระ" value="9,999" readonly>
+                                </div>
+                              </div>
+
+                              <fieldset class="form-group">
+                                <div class="row">
+                                  <legend class="col-form-label col-sm-5 pt-0">	เลือกบัญชี</legend>
+                                  <div class="col-sm-7">
+                                    <div class="form-check">
+                                      <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked>
+                                      <label class="form-check-label" for="gridRadios1">
+                                        SCB - xxx-xxxxxx-x
+                                      </label>
+                                    </div>
+                                    <div class="form-check">
+                                      <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
+                                      <label class="form-check-label" for="gridRadios2">
+                                          BBL - xxx-xxxxxx-x
+                                      </label>
+                                    </div>
+                                    <div class="form-check disabled">
+                                      <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios3" value="option3" >
+                                      <label class="form-check-label" for="gridRadios3">
+                                          KTB - xxx-xxxxxx-x
+                                      </label>
+                                    </div>
+
+                                  </div>
+
+                                  <div class="row">
+                                    <div class="col-lg-5"></div>
+                                    <div class="col-lg-7 col-sm-12 col-xs-12 bank-detail">
+                                        <label for="inputEmail3" class="col-sm-12 col-form-label">ธนาคาร: ธนาคารไทยพาณิชย์</label>
+                                        <label for="inputEmail3" class="col-sm-12 col-form-label">ชื่อบัญชี : xxxxxx xxxxxx</label>
+                                        <label for="inputEmail3" class="col-sm-12 col-form-label">หมายเลขบัญชี: 999999999</label>
+                                    </div>
+                                  </div>
+                                </div>
+                              </fieldset>
+                              <div class="form-group row">
+                                  <label for="inputEmail3" class="col-sm-5 col-form-label">วัน/เวลา ที่ฝากเงิน</label>
+                                  <div class="col-sm-4">
+                                    <input type="date" class="form-control" id="inputEmail3" placeholder="วัน ที่ฝากเงิน" >
+                                  </div>
+                                  <div class="col-sm-3 bank-time">
+                                    <input type="time" class="form-control" id="inputEmail3" placeholder="เวลา ที่ฝากเงิน" >
+                                  </div>
+                              </div>
+
+                              <div class="form-group row">
+                                  <label for="inputEmail3" class="col-sm-5 col-form-label">รูปภาพสลิป (ขนาดไม่เกิน 10Mb)</label>
+                                  <div class="col-sm-7">
+                                      <p-fileUpload mode="basic" name="demo[]" url="" accept="image/*" maxFileSize="1000000" (onUpload)="onUpload($event)"></p-fileUpload>
+                                  </div>
+                              </div>
+
+                              <div class="form-group row">
+                                <div class="col-sm-12 text-right">
+                                  <button type="submit" class="btn btn-success">  ชำระเงิน</button>
+                                </div>
+                              </div>
+                            <!-- </form> -->
+
+
+                      </div>
+                      <div class="col-lg-4 col-sm-12 col-xs-12"  >
+                          <div class="row text-left">
+                              <div class="well-get-banklist">
+                                  <p> <i class="pi pi-money-bill"></i> -ขั้นตอนชำระเงิน</p>
+
+                                  <hr>
+                                  <ul>
+                                      <li>
+                                        <div>
+                                          ขั้นตอนที่ 1
+                                        </div>
+                                      </li>
+                                      <li>
+                                        <div>
+                                            ขั้นตอนที่ 2
+                                        </div>
+                                      </li>
+                                      <li>
+                                        <div>
+                                            ขั้นตอนที่ 3
+                                        </div>
+                                      </li>
+
+
+                                  </ul>
+                              </div>
+                            </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+          </section>
+
+
+
+
+        </div>
+      </div>
+
+
+
+    </div>
+  </div>
+</div>
